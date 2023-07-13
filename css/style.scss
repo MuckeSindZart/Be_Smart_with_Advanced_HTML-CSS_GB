@@ -659,21 +659,17 @@ summary::-webkit-details-marker {
         }
     }
 
-    &__feacebook {
-        padding: 8px 11.83px 9.28px 11.55px;
+    &__ok {
+        padding: 5px 5px 5px 5px;
         background: $whiteColor;
     }
 
-    &__instagram {
-        padding: 9.06px 8.6px 8.06px 7.94px;
+    &__vk {
+        padding: 5px 5px 5px 5px;
         background: $whiteColor;
     }
     &__pinterest {
-        padding: 8.2px 9.6px 8.2px 9.93px;
-        background: $whiteColor;
-    }
-    &__twitter {
-        padding: 9.5px 7.61px 9.5px 7.95px;
+        padding: 9px 10px 9px 10px;
         background: $whiteColor;
     }
 }
@@ -1063,6 +1059,370 @@ summary::-webkit-details-marker {
         &:hover {
             color: $colorSelectSite;
             font-weight: bold;
+        }
+    }
+}
+
+// Cart
+
+.cart-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 128px;
+    padding-top: 96px;
+    padding-bottom: 128px;
+}
+
+.cart-product {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.cart {
+    display: flex;
+    max-width: 652px;
+    max-height: 306px;
+    box-shadow: 17px 19px 24px 0px rgba(0, 0, 0, 0.13);
+    box-sizing: border-box;
+
+    &__img {
+        width: 40%;
+        object-fit: cover;
+    }
+
+    &__content {
+        width: 53.7%;
+        background: $whiteColor;
+        padding: 22px 22px 56px 31px;
+        &-price,
+        &-color,
+        &-size,
+        &-quantity {
+            color: $grayTextColor;
+            font-size: 22px;
+            font-weight: 400;
+            line-height: normal;
+            margin-bottom: 6px;
+        }
+
+        &-price {
+            position: relative;
+            &::after {
+                content: " $300";
+                color: $colorSelectSite;
+            }
+        }
+
+        &-color {
+            position: relative;
+            &::after {
+                content: " Red";
+                color: $grayTextColor;
+            }
+        }
+
+        &-size {
+            position: relative;
+            &::after {
+                content: " XL";
+                color: $grayTextColor;
+            }
+        }
+
+        &-quantity {
+            position: relative;
+            &::after {
+                content: "2";
+                position: absolute;
+                top: 3px;
+                left: 130px;
+                color: $grayTextColor;
+                font-size: 18px;
+                padding: 2px 16px;
+                border: 1px solid #eaeaea;
+            }
+        }
+    }
+
+    &__heading {
+        margin-bottom: 42px;
+    }
+
+    &__link {
+        color: $backBlock;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: normal;
+        transition: color 0.3s;
+        &:hover {
+            color: $colorSelectSite;
+        }
+    }
+
+    &__buttons {
+        width: 652px;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 32px;
+    }
+
+    &__btn {
+        padding: 17px 40px;
+        color: $colorText;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: normal;
+        background: $whiteColor;
+        border: 1px solid #a4a4a4;
+        &:hover {
+            color: $whiteColor;
+            background: $colorSelectSite;
+        }
+        &:active {
+            transition: all 0.7s;
+            transform: scale(0.9);
+        }
+    }
+
+    &__btn-close {
+        height: 18px;
+        display: flex;
+        align-items: flex-start;
+        padding-top: 28px;
+        &:active {
+            transition: all 0.7s;
+            transform: scale(0.9);
+        }
+    }
+}
+
+.shipping {
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 17px;
+    font-weight: 300;
+
+    &__heading {
+        margin-bottom: 20px;
+        color: $backBlock;
+        font-size: 16px;
+        line-height: normal;
+    }
+
+    &__form {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 21px;
+    }
+
+    &__input {
+        width: 100%;
+        padding: 12px 17px 16px;
+        border: 1px solid #a4a4a4;
+        transition: color 0.3s;
+        color: $backBlock;
+        font-size: 13px;
+        font-weight: 300;
+        line-height: normal;
+    }
+
+    &__input::placeholder {
+        color: #b1b1b1;
+        font-size: 13px;
+        line-height: normal;
+    }
+
+    &__form-btn {
+        color: #4a4a4a;
+        font-size: 11px;
+        line-height: normal;
+        padding: 12px 15px;
+        background: $whiteColor;
+        border: 1px solid #a4a4a4;
+        margin-top: 2px;
+        margin-bottom: 57px;
+        &:hover {
+            transition: 0.7s;
+            color: $whiteColor;
+            background: $colorSelectSite;
+        }
+        &:active {
+            transform: scale(0.9);
+        }
+    }
+}
+
+.check__form {
+    flex-direction: column;
+    background: #e2e2e2;
+    padding: 39px 43px 42px 43px;
+    text-align: right;
+
+    & button {
+        padding: 16px 42px 16px 42px;
+        text-transform: uppercase;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 19px;
+        color: #ffffff;
+        background: $colorSelectSite;
+        border: none;
+        cursor: pointer;
+
+        &:hover {
+            background: #c1717c;
+            transition: 0.7s;
+        }
+        &:active {
+            transform: scale(0.9);
+        }
+    }
+
+    &_hr {
+        color: #e2e2e2;
+        margin: 21px 0 21px 0;
+    }
+
+    & h6 {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 11px;
+        line-height: 13px;
+        color: #4a4a4a;
+        text-transform: uppercase;
+        margin: 0 0 12px 0;
+
+        & > span {
+            margin: 0 0 0 25px;
+        }
+    }
+
+    & h4 {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 19px;
+        color: #222222;
+        text-transform: uppercase;
+
+        & > span {
+            margin: 0 0 0 25px;
+            color: $colorSelectSite;
+            font-weight: bold;
+        }
+    }
+}
+
+//Registration
+
+.registration-box {
+    display: flex;
+    gap: 128px;
+    padding-top: 64px;
+    padding-bottom: 96px;
+    background: #fff;
+}
+
+.registration {
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 21px;
+    }
+
+    &__label {
+        color: $backBlock;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: normal;
+    }
+
+    &__input {
+        width: 359px;
+        padding: 13px 16px 15px;
+        border: 1px solid #a4a4a4;
+        &::placeholder {
+            color: #b1b1b1;
+            font-size: 13px;
+            font-weight: 300;
+            line-height: normal;
+        }
+    }
+
+    &__check_label {
+        color: #000;
+        font-size: 11px;
+        font-weight: 300;
+        line-height: normal;
+        margin-right: 20px;
+        margin-top: 10px;
+        margin-bottom: 14px;
+    }
+
+    &__text {
+        width: 359px;
+        color: #b1b1b1;
+        font-size: 13px;
+        font-weight: 300;
+        line-height: normal;
+        margin-top: -5px;
+        margin-bottom: 18px;
+    }
+
+    &__btn {
+        color: #fff;
+        padding: 16px 20px 17px 29px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: normal;
+        background-color: $colorSelectSite;
+        &:hover {
+            background: #c1717c;
+            transition: all 0.7s;
+        }
+        &:active {
+            transform: scale(0.9);
+        }
+    }
+
+    &__btn svg {
+        margin-left: 20px;
+    }
+}
+
+.loyalty {
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+
+    &__heading {
+        color: $colorText;
+        font-size: 24px;
+        font-weight: 300;
+        line-height: normal;
+    }
+
+    &__text {
+        color: $colorText;
+        font-size: 24px;
+        font-weight: 300;
+        line-height: normal;
+    }
+
+    &__item {
+        margin-bottom: 16px;
+        color: $colorText;
+        font-size: 24px;
+        font-weight: 300;
+        line-height: normal;
+        &::before {
+            content: url(../img/chekMark.svg);
+            margin-right: 22px;
         }
     }
 }
