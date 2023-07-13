@@ -614,7 +614,10 @@ summary::-webkit-details-marker {
         border: 0;
         border-top-right-radius: 20px;
         border-bottom-right-radius: 20px;
-        translate: all 0.3s;
+        &:hover {
+            transition: all 0.3s;
+            font-size: 15px;
+        }
         &:active {
             transform: scale(0.96);
         }
@@ -1178,9 +1181,9 @@ summary::-webkit-details-marker {
         &:hover {
             color: $whiteColor;
             background: $colorSelectSite;
+            transition: all 0.7s;
         }
         &:active {
-            transition: all 0.7s;
             transform: scale(0.9);
         }
     }
@@ -1190,8 +1193,11 @@ summary::-webkit-details-marker {
         display: flex;
         align-items: flex-start;
         padding-top: 28px;
-        &:active {
+        &:hover {
+            transform: scale(1.1);
             transition: all 0.7s;
+        }
+        &:active {
             transform: scale(0.9);
         }
     }
@@ -1257,7 +1263,7 @@ summary::-webkit-details-marker {
 
 .check__form {
     flex-direction: column;
-    background: #e2e2e2;
+    background: #f5f3f3;
     padding: 39px 43px 42px 43px;
     text-align: right;
 
@@ -1274,7 +1280,7 @@ summary::-webkit-details-marker {
         cursor: pointer;
 
         &:hover {
-            background: #c1717c;
+            transform: scale(1.05);
             transition: 0.7s;
         }
         &:active {
@@ -1283,7 +1289,8 @@ summary::-webkit-details-marker {
     }
 
     &_hr {
-        color: #e2e2e2;
+        height: 1px;
+        background: #e2e2e2;
         margin: 21px 0 21px 0;
     }
 
