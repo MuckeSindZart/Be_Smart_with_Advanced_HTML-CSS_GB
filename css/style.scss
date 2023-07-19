@@ -1458,6 +1458,9 @@ summary::-webkit-details-marker {
     .top {
         &-head {
             padding: 60px 15px 60px 15px;
+            align-items: center;
+            gap: 32px;
+            height: 150px;
         }
         .intro {
             width: 90%;
@@ -1766,6 +1769,16 @@ summary::-webkit-details-marker {
         margin: 32px 0 65px 0;
     }
 }
+
+@media (max-width: 525px) {
+    .cart__buttons button,
+    .cart__buttons a {
+        font-size: 12px;
+        line-height: 14px;
+        padding: 9px 18px;
+    }
+}
+
 @media (max-width: 380px) {
     .center {
         padding: 0;
@@ -1779,9 +1792,10 @@ summary::-webkit-details-marker {
         font-size: 16px;
     }
 
+    .registration__text,
     .registration__form,
     .registration__input {
-        width: 300px;
+        width: 360px;
     }
 
     .subscribe {
@@ -1816,13 +1830,32 @@ summary::-webkit-details-marker {
         line-height: 14px;
         padding: 9px 18px;
     }
+
+    .loyalty {
+        padding: 15px;
+    }
 }
 
-@media (max-width: 525px) {
-    .cart__buttons button,
-    .cart__buttons a {
-        font-size: 12px;
-        line-height: 14px;
-        padding: 9px 18px;
+@media (max-width: 330px) {
+    .item,
+    .filter,
+    .shipping__input,
+    .registration__text,
+    .registration__form,
+    .registration__input {
+        width: 300px;
+    }
+    .product__wrapper {
+        width: 300px;
+        height: auto;
+    }
+
+    .sort {
+        justify-content: center;
+    }
+
+    .filter__summary svg {
+        width: 28px;
+        height: 15px;
     }
 }
